@@ -1,6 +1,4 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class PlayerSorter {
     public static void main(String[] args) {
@@ -15,6 +13,15 @@ public class PlayerSorter {
         footballTeam.add(player3);
 
         System.out.println("Before sorting: ");
+        for (Player pl : footballTeam) {
+            System.out.println("Age: "+pl.getAge()+", Name: "+pl.getName()+", Ranking: "+pl.getRanking());
+        }
+
+        System.out.println();
+
+        //sorting players
+        Collections.sort(footballTeam);
+        System.out.println("After sorting:");
         for (Player pl : footballTeam) {
             System.out.println("Age: "+pl.getAge()+", Name: "+pl.getName()+", Ranking: "+pl.getRanking());
         }
