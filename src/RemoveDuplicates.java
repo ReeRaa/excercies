@@ -1,6 +1,7 @@
 import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.Set;
+import java.util.TreeSet;
 
 public class RemoveDuplicates {
     public static void main(String[] args) {
@@ -20,6 +21,7 @@ public class RemoveDuplicates {
         String chString;
         Set<String> aStringSet=new LinkedHashSet<>();
 
+        //order element by insertion and with no duplicates
         for (int i=0;i<abc.length();i++){
             ch=abc.charAt(i);
             chString= Character.toString(ch);
@@ -27,7 +29,21 @@ public class RemoveDuplicates {
         }
 
         for (String str: aStringSet){
-            System.out.println(str);
+            System.out.print(str);
         }
+        System.out.println();
+        Set<String> treeSet=new TreeSet<>();
+
+        //order elements by natural ordering with no duplicates
+        for (int i=0;i<abc.length();i++){
+            ch=abc.charAt(i);
+            chString= Character.toString(ch);
+            treeSet.add(chString);
+        }
+
+        for (String str: treeSet){
+            System.out.print(str);
+        }
+
     }
 }
