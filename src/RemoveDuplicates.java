@@ -32,9 +32,12 @@ public class RemoveDuplicates {
             System.out.print(str);
         }
         System.out.println();
+
         Set<String> treeSet=new TreeSet<>();
 
         //order elements by natural ordering with no duplicates
+
+
         for (int i=0;i<abc.length();i++){
             ch=abc.charAt(i);
             chString= Character.toString(ch);

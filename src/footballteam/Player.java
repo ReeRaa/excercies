@@ -1,3 +1,5 @@
+package footballteam;
+
 public class Player implements Comparable<Player>{
     private int ranking;
     private String name;
